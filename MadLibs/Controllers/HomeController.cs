@@ -31,34 +31,25 @@ namespace MadLibs.Controllers
     [Route("/horror")]
     public ActionResult Horror(MadLibGame game)
     {
-      // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
-      // myGame.FirstName = firstName;
-      // myGame.LastName = lastName;
-      // myGame.DateOfBirth = dateOfBirth;
-
       return View(game);
     }
 
     [Route("/funny")]
     public ActionResult Funny(MadLibGame game)
     {
-      // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
-      // myGame.FirstName = firstName;
-      // myGame.LastName = lastName;
-      // myGame.DateOfBirth = dateOfBirth;
-
       return View(game);
     }
 
     [Route("/history")]
     public ActionResult History(MadLibGame game)
     {
-      // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
-      // myGame.FirstName = firstName;
-      // myGame.LastName = lastName;
-      // myGame.DateOfBirth = dateOfBirth;
-
       return View(game);
     }
   }
+  [Route("/madlibhistory"]
+    public ActionResult MadLibHistory()
+    {
+      return View();
+    }
+
 }
