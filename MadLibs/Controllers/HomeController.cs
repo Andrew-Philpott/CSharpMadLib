@@ -46,7 +46,7 @@ namespace MadLibs.Controllers
       return View(game);
     }
   
-  [Route("/about")]
+  [HttpGet("/about")]
     public ActionResult About()
     {
       return View();
