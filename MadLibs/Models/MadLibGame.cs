@@ -11,28 +11,38 @@ namespace MadLibs.Models
 
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string DateOfBirth {get;set;}
-    
-    public string RandomVerb {get;set;}
+    public string RandomAge {get; set;}
 
-    public string RandomAdverb {get;set;}
-
-    public string RandomNoun {get;set;}
-
-
-   public MadLibGame(string firstName, string lastName, string dateOfBirth){
+   public MadLibGame(string firstName, string lastName){
 
     FirstName = firstName;
     LastName = lastName;
-    DateOfBirth = dateOfBirth;
+   }
 
+  public string GetRandomAge(){
+    Random random = new Random();
+    int randomAgeNumber = random.Next(0, 100);
+    string randomAge = Verbs[randomVerbNumber];
+    return randomAge;
+  }
+   
+   public string GetRandomVerb(){
     Random random = new Random();
     int randomVerbNumber = random.Next(0, Verbs.Length-1);
-    RandomVerb = Verbs[randomVerbNumber];
+    string randomVerb = Verbs[randomVerbNumber];
+    return randomVerb;
+   }
+   public string GetRandomNoun(){
+    Random random = new Random();
     int randomNounNumber = random.Next(0, Nouns.Length-1);
     RandomNoun = Nouns[randomNounNumber];
+    return RandomNoun;
+   }
+   public string GetRandomVerb(){
+    Random random = new Random();
     int randomAdverbNumber = random.Next(0, Adverbs.Length-1);
     RandomAdverb = Adverbs[randomAdverbNumber];
+    return RandomAdverb;
    }
   }
 }
