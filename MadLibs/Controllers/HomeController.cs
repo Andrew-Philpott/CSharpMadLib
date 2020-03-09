@@ -5,7 +5,7 @@ namespace MadLibs.Controllers
 {
   public class HomeController : Controller
   {
-    [Route("/form")]
+    [Route("/")]
     public ActionResult Form() { return View(); }
 
     [Route("/result")]
@@ -45,11 +45,11 @@ namespace MadLibs.Controllers
     {
       return View(game);
     }
-  }
-  [Route("/madlibhistory"]
-    public ActionResult MadLibHistory()
+  
+  [Route("/about")]
+    public ActionResult About()
     {
       return View();
     }
-
+  } 
 }
