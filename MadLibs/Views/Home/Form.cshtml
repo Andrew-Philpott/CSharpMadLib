@@ -6,7 +6,9 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
       <h1>Create a MadLib Story</h1>
+      </div>
       <div>
         <form id="formOne" action="/result" method="post">
           <div class="form-group">
@@ -17,11 +19,27 @@
             <label for="lastName">Last Name</label>
             <input name="lastName" class="form-control" type="text">
           </div>
-          <div class="form-group" >
-            <label for="storyType">Type of story</label>
-            <input name="storyType" class="form-control" type="text">
+          <div class="form-group">
+            <div class="radio">
+              <label>
+                <input type="radio" name="storyType" value="horror" checked>
+                Horror
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="storyType" value="funny">
+                Funny
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="storyType" value="history">
+                History
+              </label>
+            </div>
           </div>
-          <button type="submit">Create MadLib</button>
+          <button type="submit">Create Story</button>
         </form>
       </div>
     </div>

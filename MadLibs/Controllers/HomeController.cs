@@ -15,21 +15,21 @@ namespace MadLibs.Controllers
       myGame.FirstName = firstName;
       myGame.LastName = lastName;
 
-      switch (storyType)
+      switch (storyType.ToLower())
       {
           case "horror":
-          return View("horror", myGame);
+          return View("Horror", myGame);
           case "funny":
-          return View("funny", myGame);
+          return View("Funny", myGame);
           case "history":
-          return View("history", myGame);
+          return View("History", myGame);
           default:
           return View("form");
       }
     }
 
     [Route("/horror")]
-     public ActionResult Result(MadLibGame game)
+    public ActionResult Horror(MadLibGame game)
     {
       // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
       // myGame.FirstName = firstName;
@@ -40,7 +40,7 @@ namespace MadLibs.Controllers
     }
 
     [Route("/funny")]
-     public ActionResult Result(MadLibGame game)
+    public ActionResult Funny(MadLibGame game)
     {
       // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
       // myGame.FirstName = firstName;
@@ -51,7 +51,7 @@ namespace MadLibs.Controllers
     }
 
     [Route("/history")]
-     public ActionResult Result(MadLibGame game)
+    public ActionResult History(MadLibGame game)
     {
       // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
       // myGame.FirstName = firstName;

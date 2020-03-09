@@ -21,7 +21,7 @@ namespace MadLibs.Models
   public string GetRandomAge(){
     Random random = new Random();
     int randomAgeNumber = random.Next(0, 100);
-    string randomAge = Verbs[randomVerbNumber];
+    string randomAge = Verbs[randomAgeNumber];
     return randomAge;
   }
    
@@ -34,14 +34,14 @@ namespace MadLibs.Models
    public string GetRandomNoun(){
     Random random = new Random();
     int randomNounNumber = random.Next(0, Nouns.Length-1);
-    RandomNoun = Nouns[randomNounNumber];
-    return RandomNoun;
+    string randomNoun = Nouns[randomNounNumber];
+    return randomNoun;
    }
-   public string GetRandomVerb(){
+   public string GetRandomAdverb(){
     Random random = new Random();
     int randomAdverbNumber = random.Next(0, Adverbs.Length-1);
-    RandomAdverb = Adverbs[randomAdverbNumber];
-    return RandomAdverb;
+    string randomAdverb = Adverbs[randomAdverbNumber];
+    return randomAdverb;
    }
   }
 }
