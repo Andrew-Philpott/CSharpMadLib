@@ -1,3 +1,5 @@
+using System;
+
 namespace MadLibs.Models
 {
   public class MadLibGame
@@ -11,7 +13,27 @@ namespace MadLibs.Models
     public string LastName { get; set; }
     public string DateOfBirth {get;set;}
     
+    public string RandomVerb {get;set;}
 
-    publoc 
+    public string RandomAdverb {get;set;}
+
+    public string RandomNoun {get;set;}
+
+
+   public MadLibGame(string firstName, string lastName, string dateOfBirth){
+
+    FirstName = firstName;
+    LastName = lastName;
+    DateOfBirth = dateOfBirth;
+
+    Random random = new Random();
+    int randomVerbNumber = random.Next(0, Verbs.Length-1);
+    RandomVerb = Verbs[randomVerbNumber];
+    int randomNounNumber = random.Next(0, Nouns.Length-1);
+    RandomNoun = Nouns[randomNounNumber];
+    int randomAdverbNumber = random.Next(0, Adverbs.Length-1);
+    RandomAdverb = Adverbs[randomAdverbNumber];
+   }
   }
 }
+    
