@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <title>Accidental Bigraphy</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fill in the blanks to write biography of person!</h1>
+      <div>
+        <form id="formOne" action="/result" method="post">
+          <div class="form-group">
+            <label for="name">A name</label>
+            <input name="name" class="form-control" type="text">
+          </div>
+          <div class="form-group" >
+            <label for="lastname">Last name</label>
+            <input name="lastname" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="databirth">Date of birth</label>
+            <input id="databirth" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="nation">Nation</label>
+            <input id="nation" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="occupation">Occupation</label>
+            <input id="occupation" class="form-control" type="text">
+          </div>
+          <button type="submit">Show me the biography</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
