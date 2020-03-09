@@ -9,12 +9,11 @@ namespace MadLibs.Controllers
     public ActionResult Form() { return View(); }
 
     [Route("/result")]
-    public ActionResult Result(string firstName, string lastName, string dateOfBirth, string storyType)
+    public ActionResult Result(string firstName, string lastName, string storyType)
     {
-      MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
+      MadLibGame myGame = new MadLibGame(firstName, lastName);
       myGame.FirstName = firstName;
       myGame.LastName = lastName;
-      myGame.DateOfBirth = dateOfBirth;
 
       switch (storyType)
       {
@@ -30,36 +29,36 @@ namespace MadLibs.Controllers
     }
 
     [Route("/horror")]
-     public ActionResult Result(string firstName, string lastName, string dateOfBirth)
+     public ActionResult Result(MadLibGame game)
     {
-      MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
-      myGame.FirstName = firstName;
-      myGame.LastName = lastName;
-      myGame.DateOfBirth = dateOfBirth;
+      // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
+      // myGame.FirstName = firstName;
+      // myGame.LastName = lastName;
+      // myGame.DateOfBirth = dateOfBirth;
 
-      return View(myGame);
+      return View(game);
     }
 
     [Route("/funny")]
-     public ActionResult Result(string firstName, string lastName, string dateOfBirth)
+     public ActionResult Result(MadLibGame game)
     {
-      MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
-      myGame.FirstName = firstName;
-      myGame.LastName = lastName;
-      myGame.DateOfBirth = dateOfBirth;
+      // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
+      // myGame.FirstName = firstName;
+      // myGame.LastName = lastName;
+      // myGame.DateOfBirth = dateOfBirth;
 
-      return View(myGame);
+      return View(game);
     }
 
     [Route("/history")]
-     public ActionResult Result(string firstName, string lastName, string dateOfBirth)
+     public ActionResult Result(MadLibGame game)
     {
-      MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
-      myGame.FirstName = firstName;
-      myGame.LastName = lastName;
-      myGame.DateOfBirth = dateOfBirth;
+      // MadLibGame myGame = new MadLibGame(firstName, lastName, dateOfBirth);
+      // myGame.FirstName = firstName;
+      // myGame.LastName = lastName;
+      // myGame.DateOfBirth = dateOfBirth;
 
-      return View(myGame);
+      return View(game);
     }
   }
 }

@@ -11,7 +11,6 @@ namespace MadLibs.Models
 
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string RandomAge {get; set;}
 
    public MadLibGame(string firstName, string lastName){
 
