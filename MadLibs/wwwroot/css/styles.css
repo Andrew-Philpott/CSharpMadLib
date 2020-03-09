@@ -2,7 +2,15 @@
   margin-top: 30px;
   font-size: 20px;
 }
-
+.aboutus-container{
+  width: 100%;
+  height: 20%;
+  border: 2px solid red;
+}
+.aboutus {
+  border-radius: 20px;
+  float: right;
+}
 .character{
   color: teal;
   font-weight: bold;

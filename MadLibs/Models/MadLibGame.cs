@@ -13,7 +13,6 @@ namespace MadLibs.Models
     public string LastName { get; set; }
 
    public MadLibGame(string firstName, string lastName){
-
     FirstName = firstName;
     LastName = lastName;
    }

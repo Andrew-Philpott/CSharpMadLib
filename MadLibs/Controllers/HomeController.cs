@@ -5,8 +5,8 @@ namespace MadLibs.Controllers
 {
   public class HomeController : Controller
   {
-    [Route("/")]
-    public ActionResult Form() { return View(); }
+    [HttpGet("/")]
+    public ActionResult Index() { return View(); }
 
     [Route("/result")]
     public ActionResult Result(string firstName, string lastName, string storyType)
@@ -24,7 +24,7 @@ namespace MadLibs.Controllers
           case "history":
           return View("History", myGame);
           default:
-          return View("form");
+          return View("Index");
       }
     }
 
@@ -46,10 +46,10 @@ namespace MadLibs.Controllers
       return View(game);
     }
   
-  [HttpGet("/about")]
-    public ActionResult About()
-    {
-      return View();
+  [Route("/aboutus")]
+    public ActionResult AboutUs() 
+    { 
+      return View(); 
     }
-  } 
+  }
 }
