@@ -4,18 +4,9 @@
 
 #### By _**Andriy Veremyeyev & Andrew Philpott**_
 
-## Description
+## Summary
 
-
-
-
-## Specs
-
-- _Spec: ._
-
-  - Input: 
-  - Output: 
-
+Worked on MVC routing. Ran into a number of problems with Visual Studio Code server sharing. Several times updates would not be displayed on either of our computers. Sometimes SOME updates would show but not others for changes made to a page. I plan on just coming to class now.
 
 ## Setup/Installation Requirements
 
